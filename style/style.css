@@ -1,0 +1,70 @@
+html {
+	width: 1280px;
+	background-color: rgb(242, 242, 242);
+}
+
+body {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+	box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+header {
+	max-height: 56px;
+}
+
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.main-navigation li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.main-navigation a {
+	display: block;
+	width: 239px;
+	padding: 20px 0;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+.main-navigation a:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(118, 99, 87);
+}
+
+.main-navigation .logo {
+	width: 244px;
+	padding: 0;
+}
+
+.logo img {
+	width: 138px;
+	height: 70px;
+}
