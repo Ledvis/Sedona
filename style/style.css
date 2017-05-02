@@ -9,10 +9,11 @@ body {
 	padding: 0;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: 1.2;
 	color: rgb(0, 0, 0);
 	text-transform: uppercase;
+	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
@@ -60,6 +61,7 @@ header {
 }
 
 .main-navigation .logo {
+	display: block;
 	width: 244px;
 	padding: 0;
 }
@@ -67,4 +69,111 @@ header {
 .logo img {
 	width: 138px;
 	height: 70px;
+}
+
+.banner {
+	min-height: 724px;
+	text-align: center;
+	background: rgb(255, 255, 255) url("../img/banner.jpg") no-repeat 0px -56px;
+}
+
+.banner p {
+	margin: 0;
+}
+
+.banner .banner-desc {
+	width: 440px;
+	margin: 0 auto;
+	margin-bottom: 28px;
+	padding-top: 567px;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+}
+
+.banner .banner-features {
+	width: 490px;
+	margin: 0 auto;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 26px;
+	text-transform: uppercase;
+}
+
+.content-desc {
+	float: left;
+	width: 400px;
+	height: 256px;
+	padding: 60px;
+	padding-top: 53px;
+	padding-bottom: 57px;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 21px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	background-color: rgb(129, 179, 210);
+}
+
+.content-desc h2 {
+	margin: 0;
+	margin-bottom: 22px;
+	font-size: 21px;
+	line-height: 24px;
+}
+
+.content-desc span {
+	display: inline-block;
+	margin-bottom: 20px;
+	vertical-align: top;
+}
+
+.content-desc p {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.content-img {
+	float: right;
+	height: 256px;
+}
+
+.content-items {
+	text-align: center;
+}
+
+.content-item {
+	float: left;
+	width: 400px;
+	padding: 0 72px;
+	padding-top: 160px;
+	padding-bottom: 80px;
+	box-sizing: border-box;
+}
+
+.content-item:nth-child(2) {
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+.content-item:nth-child(3) {
+	padding-left: 90px;
+	padding-right: 90px;
+}
+
+.content-item h2 {
+	margin: 0;
+	margin-bottom: 21px;
+	color: rgb(0, 0, 0);
+	font-size: 21px;
+	line-height: 24px;
+}
+
+.content-items p {
+	margin: 0;
+	font-size: 14px;
+	line-height: 21px;
+	color: rgb(51, 51, 51);
 }
