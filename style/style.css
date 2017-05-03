@@ -4,6 +4,7 @@ html {
 }
 
 body {
+	position: relative;
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0;
@@ -64,8 +65,7 @@ header {
 }
 
 .main-navigation a:hover {
-	color: rgb(255, 255, 255);
-	background-color: rgb(118, 99, 87);
+	color: rgb(129, 179, 210);
 }
 
 .main-navigation .logo {
@@ -156,12 +156,42 @@ header {
 }
 
 .content-item {
+	position: relative;
 	float: left;
 	width: 400px;
 	padding: 0 72px;
 	padding-top: 160px;
 	padding-bottom: 80px;
 	box-sizing: border-box;
+}
+
+.content-item::before {
+	content: "";
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	background: url("../img/sprite.png") no-repeat;
+}
+
+.content-item:nth-child(1)::before {
+	width: 75px;
+	height: 72px;
+	margin-left: -39.5px;
+	background-position: -40px -0px;
+}
+
+.content-item:nth-child(2)::before {
+	width: 74px;
+	height: 70px;
+	margin-left: -39px;
+	background-position: -40px -92px;
+}
+
+.content-item:nth-child(3)::before {
+	width: 64px;
+	height: 76px;
+	margin-left: -32px;
+	background-position: -40px -182px;
 }
 
 .content-item:nth-child(2) {
@@ -236,7 +266,100 @@ header {
 	text-decoration: none;
 }
 
+.btn:hover {
+	background-color: rgb(96, 78, 67);
+}
+
+.btn:active {
+	background-color: rgb(80, 62, 51);
+}
+
 .map img {
 	width: 1200px;
-	height: 473px;
+	height: 593px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 40px 0;
+	padding-left: 132px;
+	padding-right: 103px;
+	box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+footer h3 {
+	float: left;
+	max-width: 136px;
+	margin: 0;
+	padding-top: 5px;
+	font-size: 21px;
+	line-height: 26px;
+}
+
+.social {
+	position: absolute;
+	bottom: 37px;
+	left: 50%;
+	margin-left: -75px;
+	font-size: 0;
+}
+
+.social a {
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	margin-right: 6px;
+	vertical-align: top;
+	font-size: 0;
+	text-decoration: none;
+	background: rgb(129, 179, 210) url(../img/sprite.png) no-repeat;
+	cursor: pointer;
+}
+
+.social a:hover {
+	background-color: rgb(102, 158, 192);
+}
+
+.social a:active {
+	background-color: rgb(84, 150, 189);
+}
+
+.social .tw {
+	background-position: -27px -298px;
+}
+
+.social .fb {
+	background-position: -63px -265px;
+}
+
+.social .yt {
+	margin-right: 0;
+	background-position: -28px -261px;
+}
+
+.copyright {
+	float: right;
+}
+
+.copyright a {
+	display: inline-block;
+	width: 113px;
+	height: 39px;
+	vertical-align: top;
+	font-size: 0;
+	background: url(../img/sprite.png) no-repeat -20px -369px;
+}
+
+.copyright a:active {
+	opacity: 0.5;
+}
+
+.copyright span {
+	display: inline-block;
+	padding-top: 10px;
+	margin-right: 5px;
+	vertical-align: top;
 }
