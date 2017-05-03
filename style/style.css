@@ -23,6 +23,14 @@ body {
 	clear: both;
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -101,42 +109,45 @@ header {
 	text-transform: uppercase;
 }
 
-.content-desc {
-	float: left;
+.content-desc,
+.content-feature {
 	width: 400px;
 	height: 256px;
 	padding: 60px;
-	padding-top: 53px;
-	padding-bottom: 57px;
+	padding-top: 49px;
+	padding-bottom: 54px;
 	box-sizing: border-box;
 	font-size: 14px;
 	line-height: 21px;
 	color: rgb(255, 255, 255);
 	text-align: center;
 	background-color: rgb(129, 179, 210);
+	overflow: auto;
 }
 
-.content-desc h2 {
+.content-desc h2,
+.content-feature h2 {
 	margin: 0;
 	margin-bottom: 22px;
 	font-size: 21px;
 	line-height: 24px;
 }
 
-.content-desc span {
+.content-desc span,
+.content-feature span {
 	display: inline-block;
 	margin-bottom: 20px;
 	vertical-align: top;
 }
 
-.content-desc p {
+.content-desc p,
+.content-feature p {
 	margin: 0;
 	font-size: 14px;
 	font-weight: 400;
 }
 
 .content-img {
-	float: right;
 	height: 256px;
 }
 
@@ -176,4 +187,56 @@ header {
 	font-size: 14px;
 	line-height: 21px;
 	color: rgb(51, 51, 51);
+}
+
+.content-features {}
+
+.content-feature {
+	float: left;
+	color: rgb(0, 0, 0);
+	background-color: rgb(238, 238, 238);
+}
+
+.content-features p,
+.content-features span {
+	color: rgb(51, 51, 51);
+}
+
+.content-form {
+	padding: 0 315px;
+	padding-top: 55px;
+	text-align: center;
+}
+
+.content-form b {
+	display: block;
+	margin-bottom: 24px;
+	font-size: 30px;
+}
+
+.content-form p {
+	margin: 0;
+	margin-bottom: 45px;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgb(51, 51, 51);
+}
+
+.btn {
+	display: block;
+	width: 568px;
+	padding: 30px 10px;
+	box-sizing: border-box;
+	background-color: rgb(118, 99, 87);
+	color: rgb(255, 255, 255);
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.map img {
+	width: 1200px;
+	height: 473px;
 }
