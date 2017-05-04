@@ -1,5 +1,5 @@
 html {
-	width: 1280px;
+	min-width: 1280px;
 	background-color: rgb(242, 242, 242);
 }
 
@@ -68,6 +68,10 @@ header {
 	color: rgb(129, 179, 210);
 }
 
+.main-navigation a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
 .main-navigation .logo {
 	display: block;
 	width: 244px;
@@ -82,7 +86,7 @@ header {
 .banner {
 	min-height: 724px;
 	text-align: center;
-	background: rgb(255, 255, 255) url("../img/banner.jpg") no-repeat 0px -56px;
+	background: rgb(129, 179, 210) url("../img/banner.jpg") no-repeat 0px -56px;
 }
 
 .banner p {
@@ -101,7 +105,7 @@ header {
 }
 
 .banner .banner-features {
-	width: 490px;
+	width: 492px;
 	margin: 0 auto;
 	font-size: 14px;
 	font-weight: 400;
@@ -177,21 +181,21 @@ header {
 	width: 75px;
 	height: 72px;
 	margin-left: -39.5px;
-	background-position: -40px -0px;
+	background-position: -50px -0px;
 }
 
 .content-item:nth-child(2)::before {
 	width: 74px;
 	height: 70px;
 	margin-left: -39px;
-	background-position: -40px -92px;
+	background-position: -50px -92px;
 }
 
 .content-item:nth-child(3)::before {
 	width: 64px;
 	height: 76px;
 	margin-left: -32px;
-	background-position: -40px -182px;
+	background-position: -50px -182px;
 }
 
 .content-item:nth-child(2) {
@@ -218,8 +222,6 @@ header {
 	line-height: 21px;
 	color: rgb(51, 51, 51);
 }
-
-.content-features {}
 
 .content-feature {
 	float: left;
@@ -253,6 +255,8 @@ header {
 }
 
 .btn {
+	position: relative;
+	z-index: 1;
 	display: block;
 	width: 568px;
 	padding: 30px 10px;
@@ -264,6 +268,7 @@ header {
 	line-height: 26px;
 	text-transform: uppercase;
 	text-decoration: none;
+	border: none;
 }
 
 .btn:hover {
@@ -308,6 +313,7 @@ footer h3 {
 }
 
 .social a {
+	position: relative;
 	display: inline-block;
 	width: 46px;
 	height: 48px;
@@ -315,8 +321,16 @@ footer h3 {
 	vertical-align: top;
 	font-size: 0;
 	text-decoration: none;
-	background: rgb(129, 179, 210) url(../img/sprite.png) no-repeat;
+	background-color: rgb(129, 179, 210);
 	cursor: pointer;
+}
+
+.social a::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: url(../img/sprite.png) no-repeat;
 }
 
 .social a:hover {
@@ -327,17 +341,32 @@ footer h3 {
 	background-color: rgb(84, 150, 189);
 }
 
-.social .tw {
-	background-position: -27px -298px;
+.social a:active::before {
+	opacity: 0.3;
 }
 
-.social .fb {
-	background-position: -63px -265px;
+.social .tw::before {
+	width: 17px;
+	height: 15px;
+	margin-top: -7.5px;
+	margin-left: -8.5px;
+	background-position: -50px -314px;
 }
 
-.social .yt {
-	margin-right: 0;
-	background-position: -28px -261px;
+.social .fb::before {
+	width: 10px;
+	height: 19px;
+	margin-top: -9.5px;
+	margin-left: -5px;
+	background-position: -90px -278px;
+}
+
+.social .yt::before {
+	width: 20px;
+	height: 16px;
+	margin-top: -8px;
+	margin-left: -10px;
+	background-position: -50px -278px;
 }
 
 .copyright {
@@ -350,7 +379,11 @@ footer h3 {
 	height: 39px;
 	vertical-align: top;
 	font-size: 0;
-	background: url(../img/sprite.png) no-repeat -20px -369px;
+	background: url(../img/sprite.png) no-repeat -30px -369px;
+}
+
+.copyright a:hover {
+	background: url("../img/sprite.png") no-repeat -10px -428px;
 }
 
 .copyright a:active {
@@ -362,4 +395,187 @@ footer h3 {
 	padding-top: 10px;
 	margin-right: 5px;
 	vertical-align: top;
+}
+
+.popup {
+	position: absolute;
+	bottom: 201px;
+	left: 50%;
+	z-index: 1;
+	display: none;
+	min-width: 568px;
+	margin-left: -285px;
+	padding: 55px;
+	box-sizing: border-box;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.popup-show {
+	display: block;
+	-webkit-animation: opacity 0.6s;
+	animation: opacity 0.6s;
+}
+
+label[for="enter"],
+label[for="exit"] {
+	position: relative;
+	display: block;
+	margin-bottom: 29px;
+}
+
+.popup label,
+.popup input {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	font-family: "PT Sans", "Arial", sans-serif;
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+}
+
+.popup input {
+	box-sizing: border-box;
+	background-color: rgb(242, 242, 242);
+	border: 2px solid rgb(242, 242, 242);
+}
+
+label[for="enter"] input,
+label[for="exit"] input {
+	width: 346px;
+	margin-left: 20px;
+	padding: 4px 15px;
+}
+
+.popup input:hover {
+	background-color: rgb(235, 235, 235);
+}
+
+.popup input:active {
+	background-color: rgb(255, 255, 255);
+	border: 2px solid rgb(229, 229, 229);
+}
+
+label[for="enter"]::before,
+label[for="exit"]::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 430px;
+	width: 22px;
+	height: 22px;
+	background: url("../img/sprite.png") no-repeat -10px -477px;
+}
+
+label[for="enter"]::before {}
+
+label[for="exit"] input {
+	margin-left: 16px;
+}
+
+label[for="adult"] input,
+label[for="child"] input {
+	width: 114px;
+	padding: 4px 51px;
+}
+
+label[for="adult"] input {
+	margin-right: 53px;
+	margin-left: 37px;
+}
+
+label[for="child"] input {
+	margin-left: 19px;
+}
+
+label[for="adult"],
+label[for="child"] {
+	position: relative;
+}
+
+label[for="adult"]::before,
+label[for="adult"]::after,
+label[for="child"]::before,
+label[for="child"]::after {
+	position: absolute;
+	top: -4px;
+	font-size: 28px;
+	color: rgb(169, 169, 169);
+}
+
+label[for="adult"]::before {
+	content: "-";
+	left: 125px;
+}
+
+label[for="adult"]::after {
+	content: "+";
+	left: 199px;
+}
+
+label[for="child"]::before {
+	content: "-";
+	left: 73px;
+}
+
+label[for="child"]::after {
+	content: "+";
+	left: 149px;
+}
+
+label[for="adult"]:hover::before,
+label[for="adult"]:hover::after,
+label[for="child"]:hover::before,
+label[for="child"]:hover::after {
+	color: rgb(0, 0, 0);
+}
+
+.popup .btn {
+	width: 100%;
+	margin-top: 54px;
+	padding: 17px;
+	background-color: rgb(129, 179, 210);
+	cursor: pointer;
+}
+
+.popup .btn:hover {
+	background-color: rgb(102, 158, 192);
+}
+
+.popup .btn:active {
+	background-color: rgb(84, 150, 189);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(129, 179, 210, 0.3);
+}
+
+.overlay-show {
+	display: block;
+}
+
+@-webkit-keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

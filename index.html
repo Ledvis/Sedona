@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sedona</title>
+	<link rel="stylesheet" href="style/normalize.min.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="style/style.css">
 </head>
@@ -91,7 +92,7 @@
 		<section class="content-form">
 			<b>Заинтересовались?</b>
 			<p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-			<a class="btn" href="">Поиск гостиницы в Седоне</a>
+			<a class="btn link" href="">Поиск гостиницы в Седоне</a>
 		</section>
 		<section class="map">
 			<img src="img/map.jpg" alt="" width="1200" height="593">
@@ -109,5 +110,28 @@
 			<a href="https://htmlacademy.ru/" target="_blank">htmlacademy</a>
 		</div>
 	</footer>
+	<div class="popup">
+		<form action="#" method="post">
+			<label for="enter">
+				Дата заезда:
+				<input id="enter" type="text" value="24 Апреля 2016">
+			</label>
+			<label for="exit">
+				Дата выезда:
+				<input id="exit" type="text" value="4 июля 2016">
+			</label>
+			<label for="adult">
+				Взрослые:
+				<input id="adult" type="text" value="2">
+			</label>
+			<label for="child">
+				Дети:
+				<input id="child" type="text" value="0">
+			</label>
+			<button class="btn" type="button">Найти</button>
+		</form>
+	</div>
+	<div class="overlay"></div>
+	<script src="script/popup.js"></script>
 </body>
 </html>
