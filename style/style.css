@@ -579,3 +579,81 @@ label[for="child"]:hover::after {
 		opacity: 1;
 	}
 }
+
+
+/*hotels*/
+
+.inner-page footer {
+	position: static;
+}
+
+.inner-form {
+	padding: 25px 72px;
+	padding-bottom: 31px;
+	line-height: 21px;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	background: rgb(112, 134, 155) url("../img/form.jpg") no-repeat top;
+}
+
+.inner-form-check {
+	float: left;
+	width: 254px;
+}
+
+.inner-form-check span {
+	display: block;
+	margin-bottom: 26px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.inner-form-check input {
+	display: none;
+}
+
+.inner-form-check label {
+	position: relative;
+	display: block;
+	margin-bottom: 26px;
+  padding-left: 39px;
+}
+
+.indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 22px;
+	height: 22px;
+	box-sizing: border-box;
+	border: 3px solid;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.inner-form-check input:checked+.indicator::before,
+.inner-form-check input:checked+.indicator::after {
+	content: "";
+	position: absolute;
+	background-color: rgb(255, 255, 255);
+}
+
+.indicator::before {
+	top: 5px;
+	left: 4px;
+	width: 3px;
+	height: 10px;
+	transform: rotate(-45deg);
+}
+
+.indicator::after {
+	top: 4px;
+	left: 5px;
+	width: 20px;
+	height: 3px;
+	transform: rotate(-45deg);
+}
+
+.inner-form-check label:last-of-type {
+	margin-bottom: 0;
+}
