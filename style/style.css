@@ -583,10 +583,6 @@ label[for="child"]:hover::after {
 
 /*hotels*/
 
-.inner-page footer {
-	position: static;
-}
-
 .inner-form {
 	padding: 25px 72px;
 	padding-bottom: 31px;
@@ -601,7 +597,8 @@ label[for="child"]:hover::after {
 	width: 254px;
 }
 
-.inner-form-check span {
+.inner-form-check>span,
+.inner-form-filter>span {
 	display: block;
 	margin-bottom: 26px;
 	font-size: 16px;
@@ -616,7 +613,7 @@ label[for="child"]:hover::after {
 	position: relative;
 	display: block;
 	margin-bottom: 26px;
-  padding-left: 39px;
+	padding-left: 39px;
 }
 
 .indicator {
@@ -629,6 +626,11 @@ label[for="child"]:hover::after {
 	border: 3px solid;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+input:disabled~span {
+	color: rgba(255, 255, 255, 0.5);
+	opacity: 0.5;
 }
 
 .inner-form-check input:checked+.indicator::before,
@@ -656,4 +658,322 @@ label[for="child"]:hover::after {
 
 .inner-form-check label:last-of-type {
 	margin-bottom: 0;
+}
+
+.inner-form-filter {
+	float: right;
+	width: 328px;
+	font-size: 0;
+}
+
+.inner-form-filter>span {
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.inner-form-filter>span::before {
+	content: "";
+	position: absolute;
+	top: 40px;
+	left: 158px;
+	width: 2px;
+	height: 22px;
+	background-color: rgb(255, 255, 255);
+}
+
+.inner-form-filter input {
+	display: inline-block;
+	width: 151px;
+	margin-bottom: 18px;
+	padding: 6.7px 3px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	color: rgb(255, 255, 255);
+	font-family: "PT Sans", "Arial", sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: transparent;
+	border: 2px solid rgb(255, 255, 255);
+}
+
+.inner-form-filter input:first-of-type {
+	border-right-width: 0;
+}
+
+.inner-form-filter input:last-of-type {
+	border-left-width: 0;
+}
+
+.inner-form-range {
+	position: relative;
+	width: 317px;
+	height: 2px;
+	margin-bottom: 32px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.inner-form-range::before {
+	content: "";
+	position: absolute;
+	width: 248px;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+}
+
+
+/*
+.inner-form-range::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 228px;
+	width: 17px;
+	height: 22px;
+	background: url("../img/sprite.png") no-repeat -0px -509px;
+}
+*/
+
+.form-rounds {
+	position: absolute;
+	top: -9px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 2px 0 rgba(0, 1, 1, 0.14);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.form-rounds::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 4px;
+	height: 4px;
+	margin-top: -2px;
+	margin-left: -2px;
+	background-color: rgb(171, 171, 171);
+	border-radius: 50%;
+}
+
+.right-side {
+	left: 232px;
+}
+
+.right-side.form-rounds::before {
+	background-color: rgb(28, 79, 128);
+}
+
+.inner-form-filter button {
+	width: 137px;
+	margin-left: 85px;
+	padding: 6px 0;
+	font-size: 14px;
+	line-height: 21px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: transparent;
+	border: 2px solid rgb(255, 255, 255);
+	cursor: pointer;
+}
+
+.inner-form-filter button:hover {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+}
+
+.inner-content {
+	position: relative;
+	padding: 31px 72px;
+}
+
+.inner-content-sorting span:first-of-type {
+	margin-right: 44px;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.inner-content-sorting span:nth-of-type(2),
+.inner-content-sorting a {
+	margin-right: 32px;
+	font-size: 12px;
+	line-height: 18px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+.inner-content-sorting a {
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px dotted rgb(129, 179, 210);
+}
+
+.inner-content-sorting a.current {
+	color: rgb(129, 179, 210);
+	border: none;
+}
+
+.arrow-up,
+.arrow-down {
+	position: absolute;
+	top: 39px;
+	border-style: solid;
+	border-color: rgb(204, 204, 204);
+}
+
+.arrow-up {
+	right: 96px;
+	border-width: 0 5.5px 10px 5.5px;
+	border-right-color: transparent;
+	border-left-color: transparent;
+}
+
+.arrow-down {
+	right: 72px;
+	border-width: 10px 5.5px 0 5.5px;
+	border-color: rgb(129, 179, 210);
+	border-right-color: transparent;
+	border-left-color: transparent;
+}
+
+.inner-content-hotel {
+	position: relative;
+	padding: 30px 72px;
+}
+
+.inner-content-hotel::before,
+.inner-content-hotel:last-child::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: rgb(229, 229, 229);
+}
+
+.inner-content-hotel::before {
+	top: 0;
+}
+
+.inner-content-hotel:last-child::after {
+	bottom: 0;
+}
+
+.inner-content-hotel figure {
+	float: left;
+	width: 135px;
+	height: 90px;
+	margin: 0;
+	margin-right: 31px;
+}
+
+.inner-content-hotel img {
+	width: 135px;
+	height: 90px;
+}
+
+.hotel-desc {
+	float: left;
+	width: 258px;
+}
+
+.hotel-desc h2 {
+	margin: 0;
+	margin-bottom: 12px;
+	font-size: 21px;
+	line-height: 15px;
+}
+
+.hotel-desc h2:hover {
+	color: rgb(129, 179, 210);
+}
+
+.hotel-desc h2:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.hotel-desc span {
+	display: block;
+	line-height: 21px;
+	color: rgb(51, 51, 51);
+}
+
+.hotel-desc-left a {
+	width: 110px;
+	background-color: rgb(129, 179, 210);
+}
+
+.hotel-desc-left a:hover {
+	background-color: rgb(102, 158, 192);
+}
+
+.hotel-desc-left a:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: rgb(84, 150, 189);
+}
+
+.hotel-desc-right a {
+	width: 142px;
+	background-color: rgb(118, 99, 87);
+}
+
+.hotel-desc-right a:hover {
+	background-color: rgb(96, 78, 67);
+}
+
+.hotel-desc-right a:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: rgb(80, 62, 51);
+}
+
+.hotel-desc a {
+	display: inline-block;
+	margin-top: 16px;
+	padding: 4px 0;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	text-align: center;
+}
+
+.hotel-rating {
+	float: right;
+}
+
+.inner-content-hotel:nth-child(2) .hotel-stars {
+	width: 42px;
+}
+
+.inner-content-hotel:nth-child(3) .hotel-stars {
+	width: 65px;
+}
+
+.hotel-stars {
+	float: right;
+	width: 89px;
+	height: 17px;
+	margin-bottom: 47px;
+	background: url("../img/sprite.png") repeat -0px -539px;
+}
+
+.inner-content-hotel:nth-child(2) .hotel-stars {
+	width: 42px;
+	margin-left: 69px;
+}
+
+.hotel-rating span {
+	clear: both;
+	display: block;
+	width: 110px;
+	padding: 5px 0;
+	color: rgb(102, 102, 102);
+	text-align: center;
+	background-color: rgb(242, 242, 242);
+}
+
+.inner-page footer {
+	position: relative;
 }

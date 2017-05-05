@@ -38,43 +38,132 @@
 				<div class="inner-form-check">
 					<span>Инфраструктура:</span>
 					<label for="checkbox-1">
-						Бассейн
-						<input type="checkbox" name="" id="checkbox-1" name="Бассейн">
+						<input type="checkbox" id="checkbox-1" name="Бассейн">
 						<span class="indicator"></span>
+						<span>Бассейн</span>
 					</label>
-					<label for="checkbox-2">
-						Парковка
-						<input type="checkbox" name="" id="checkbox-2" name="Парковка">
+					<label class="disabled" for="checkbox-2">
+						<input type="checkbox" id="checkbox-2" name="Парковка" disabled>
 						<span class="indicator"></span>
+						<span>Парковка</span>
 					</label>
 					<label for="checkbox-3">
-						wi-fi
-						<input type="checkbox" name="" id="checkbox-3" name="wi-fi">
+						<input type="checkbox" id="checkbox-3" name="wi-fi">
 						<span class="indicator"></span>
+						<span>wi-fi</span>
 					</label>
 				</div>
 				<div class="inner-form-check">
 					<span>Тип жилья:</span>
 					<label for="checkbox-4">
-						Гостиница
-						<input type="checkbox" name="" id="checkbox-4" name="Гостиница">
+						<input type="checkbox" id="checkbox-4" name="Гостиница">
 						<span class="indicator"></span>
+						<span>Гостиница</span>
 					</label>
 					<label for="checkbox-5">
-						Мотель
-						<input type="checkbox" name="" id="checkbox-5" name="Мотель">
+						<input type="checkbox" id="checkbox-5" name="Мотель">
 						<span class="indicator"></span>
+						<span>Мотель</span>
 					</label>
 					<label for="checkbox-6">
-						Апартаменты
-						<input type="checkbox" name="" id="checkbox-6" name="Апартаменты">
+						<input type="checkbox" id="checkbox-6" name="Апартаменты">
 						<span class="indicator"></span>
+						<span>Апартаменты</span>
 					</label>
+				</div>
+				<div class="inner-form-filter">
+					<span>Стоимость в сутки (Р):</span>
+					<input type="text" value="0">
+					<input type="text" value="3000">
+					<div class="inner-form-range">
+						<span class="form-rounds"></span>
+						<span class="form-rounds right-side"></span>
+					</div>
+					<button type="button">Показать</button>
 				</div>
 			</form>
 		</section>
+		<section class="inner-content">
+			<div class="inner-content-sorting">
+				<span>Найдено: 3</span>
+				<span>Сортировка:</span>
+				<a class="current" href="#">По цене</a>
+				<a href="#">По типу</a>
+				<a href="#">По рейтингу</a>
+				<span class="arrow-up"></span>
+				<span class="arrow-down"></span>
+			</div>
+		</section>
+		<section class="inner-content-hotels">
+			<div class="inner-content-hotel">
+				<div class="clearfix">
+					<figure>
+						<img src="img/hotel-1.jpg" alt="" width="135" height="90">
+					</figure>
+					<div class="hotel-desc">
+						<h2>Amara Resort &amp; Spa</h2>
+						<div class="hotel-desc-left left">
+							<span>Гостиница</span>
+							<a href="#">Подробнее</a>
+						</div>
+						<div class="hotel-desc-right right">
+							<span>От 3500 Р.</span>
+							<a href="#">Забронировать</a>
+						</div>
+					</div>
+					<div class="hotel-rating">
+						<div class="hotel-stars"></div>
+						<span>Рейтинг: 8,5</span>
+					</div>
+				</div>
+			</div>
+			<div class="inner-content-hotel">
+				<div class="clearfix">
+					<figure>
+						<img src="img/hotel-2.jpg" alt="" width="135" height="90">
+					</figure>
+					<div class="hotel-desc">
+						<h2>Desert Quail Inn</h2>
+						<div class="hotel-desc-left left">
+							<span>Мотель</span>
+							<a href="#">Подробнее</a>
+						</div>
+						<div class="hotel-desc-right right">
+							<span>От 2000 Р.</span>
+							<a href="#">Забронировать</a>
+						</div>
+					</div>
+					<div class="hotel-rating">
+						<div class="hotel-stars"></div>
+						<span>Рейтинг: 8,9</span>
+					</div>
+				</div>
+			</div>
+			<div class="inner-content-hotel">
+				<div class="clearfix">
+					<figure>
+						<img src="img/hotel-3.jpg" alt="" width="135" height="90">
+					</figure>
+					<div class="hotel-desc">
+						<h2>Villas at Poco Diablo</h2>
+						<div class="hotel-desc-left left">
+							<span>Апартаменты</span>
+							<a href="#">Подробнее</a>
+						</div>
+						<div class="hotel-desc-right right">
+							<span>От 4000 Р.</span>
+							<a href="#">Забронировать</a>
+						</div>
+					</div>
+					<div class="hotel-rating">
+						<div class="hotel-stars"></div>
+						<span>Рейтинг: 9,2</span>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
-	<footer>
+	<footer class="clearfix">
 		<h3>#Visitsedona</h3>
 		<div class="social">
 			<a class="tw" href="#">Твитер</a>
