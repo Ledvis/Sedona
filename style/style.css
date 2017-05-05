@@ -37,11 +37,8 @@ img {
 	height: auto;
 }
 
-header {
-	max-height: 56px;
-}
-
 .main-navigation ul {
+	min-width: 56px;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -73,12 +70,15 @@ header {
 }
 
 .main-navigation .logo {
+	position: relative;
 	display: block;
 	width: 244px;
 	padding: 0;
 }
 
 .logo img {
+	position: absolute;
+	left: 53px;
 	width: 138px;
 	height: 70px;
 }
@@ -589,7 +589,7 @@ label[for="child"]:hover::after {
 	line-height: 21px;
 	color: rgb(255, 255, 255);
 	text-transform: uppercase;
-	background: rgb(112, 134, 155) url("../img/form.jpg") no-repeat top;
+	background: rgb(112, 134, 155) url("../img/form.jpg") no-repeat 0 -60px;
 }
 
 .inner-form-check {
@@ -645,6 +645,7 @@ input:disabled~span {
 	left: 4px;
 	width: 3px;
 	height: 10px;
+	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
@@ -653,6 +654,7 @@ input:disabled~span {
 	left: 5px;
 	width: 20px;
 	height: 3px;
+	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
@@ -686,6 +688,7 @@ input:disabled~span {
 	width: 151px;
 	margin-bottom: 18px;
 	padding: 6.7px 3px;
+	vertical-align: top;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 21px;
@@ -789,6 +792,10 @@ input:disabled~span {
 .inner-content {
 	position: relative;
 	padding: 31px 72px;
+}
+
+.inner-content-sorting {
+	padding-right: 38px;
 }
 
 .inner-content-sorting span:first-of-type {
@@ -902,6 +909,10 @@ input:disabled~span {
 	color: rgb(51, 51, 51);
 }
 
+.hotel-desc-left {
+	width: 110px;
+}
+
 .hotel-desc-left a {
 	width: 110px;
 	background-color: rgb(129, 179, 210);
@@ -914,6 +925,10 @@ input:disabled~span {
 .hotel-desc-left a:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: rgb(84, 150, 189);
+}
+
+.hotel-desc-right {
+	width: 142px;
 }
 
 .hotel-desc-right a {
@@ -934,6 +949,7 @@ input:disabled~span {
 	display: inline-block;
 	margin-top: 16px;
 	padding: 4px 0;
+	vertical-align: top;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	text-align: center;
